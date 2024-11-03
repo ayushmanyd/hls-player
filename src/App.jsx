@@ -5,6 +5,14 @@ import sunIcon from "./assets/sun.svg";
 import moonIcon from "./assets/moon.svg";
 
 const App = () => {
+  const [videoUrl, setVideoUrl] = useState("");
+  const [isValidUrl, setIsValidUrl] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const handleUrlChange = (e) => {
+    setVideoUrl(e.target.value);
+  };
+
   return <div></div>;
 };
 
