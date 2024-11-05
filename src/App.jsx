@@ -13,7 +13,17 @@ const App = () => {
     setVideoUrl(e.target.value);
   };
 
-  return <div></div>;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const isValid = videoUrl.endsWith(".m3u8");
+    setIsValidUrl(isValid);
+  };
+
+  return (
+    <div
+      >
+    </div>
+  );
 };
 
 export default App;
