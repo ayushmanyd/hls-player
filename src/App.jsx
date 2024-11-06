@@ -38,7 +38,16 @@ const App = () => {
       }`}
     >
       <h1 className="text-4xl font-bold text-center mb-4">HLS Player</h1>
-      
+      <button
+        onClick={toggleDarkMode}
+        className="mb-4 flex items-center px-4 py-2 rounded-md bg-white text-white hover:bg-blue-600 transition"
+      >
+        <img
+          src={isDarkMode ? sunIcon : moonIcon}
+          alt="Toggle Dark Mode"
+          className="w-6 h-6"
+        />
+      </button>
     </div>
   );
 };
