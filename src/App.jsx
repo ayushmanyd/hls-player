@@ -48,6 +48,11 @@ const App = () => {
           className="w-6 h-6"
         />
       </button>
+      <form onSubmit={handleSubmit} className="mb-4">
+        <input
+          type="text"
+        />
+      </form>
     </div>
   );
 };
