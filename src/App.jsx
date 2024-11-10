@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from "react";
 import HLSPlayer from "./HLSPlayer";
 import sunIcon from "./assets/sun.svg";
@@ -25,50 +24,19 @@ const App = () => {
 
   useEffect(() => {
     if (isDarkMode) {
-      document.body.classList.add("dark");
+      document.documentElement.classList.add("dark");
     } else {
-      document.body.classList.remove("dark");
+      document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode]);
 
   return (
-    <div
-      className={`max-w-6xl mx-auto p-5 ${
-        isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"
-      }`}
-    >
-      <h1 className="text-4xl font-bold text-center mb-4">HLS Player</h1>
-      <button
-        onClick={toggleDarkMode}
-        className="mb-4 flex items-center px-4 py-2 rounded-md bg-white text-white hover:bg-blue-600 transition"
-      >
-        <img
-          src={isDarkMode ? sunIcon : moonIcon}
-          alt="Toggle Dark Mode"
-          className="w-6 h-6"
-        />
-      </button>
-      <form onSubmit={handleSubmit} className="mb-4">
-        <input
-          type="text"
-          value={videoUrl}
-          onChange={handleUrlChange}
-          placeholder="Paste your HLS stream URL here"
-          className="w-full p-2 border border-gray-300 rounded-md mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition"
-        >
-          Load Stream
-        </button>
-      </form>
-      {!isValidUrl && (
-        <p className="text-red-500">
-          Please enter a valid HLS URL ending with .m3u8.
-        </p>
-      )}
-      {isValidUrl && videoUrl && <HLSPlayer videoUrl={videoUrl} />}
+    <div className="min-h-screen bg-background text-foreground flex items-center justify-center p-4">
+      <div className="w-full max-w-2xl bg-background rounded-lg shadow-xl overflow-hidden">
+        <div className="p-6">
+          
+        </div>
+      </div>
     </div>
   );
 };
