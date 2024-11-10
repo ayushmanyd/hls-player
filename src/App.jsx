@@ -34,7 +34,9 @@ const App = () => {
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center p-4">
       <div className="w-full max-w-2xl bg-background rounded-lg shadow-xl overflow-hidden">
         <div className="p-6">
-          
+          <div className="flex items-center justify-between mb-6">
+            <h1 className="text-2xl font-bold text-foreground">HLS Player</h1>
+          </div>
         </div>
       </div>
     </div>
