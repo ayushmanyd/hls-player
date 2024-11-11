@@ -41,6 +41,11 @@ const App = () => {
               className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               aria-label="Toggle dark mode"
             >
+              <img
+                src={isDarkMode ? sunIcon : moonIcon}
+                alt="Toggle Dark Mode"
+                className="w-6 h-6"
+              />
             </button>
           </div>
         </div>
