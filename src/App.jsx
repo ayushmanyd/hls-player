@@ -36,6 +36,12 @@ const App = () => {
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-2xl font-bold text-foreground">HLS Player</h1>
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              aria-label="Toggle dark mode"
+            >
+            </button>
           </div>
         </div>
       </div>
