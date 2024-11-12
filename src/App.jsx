@@ -48,6 +48,14 @@ const App = () => {
               />
             </button>
           </div>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="space-y-2">
+              <input
+                type="text"
+                value={videoUrl}
+              />
+            </div>
+          </form>
         </div>
       </div>
     </div>
