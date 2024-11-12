@@ -53,6 +53,9 @@ const App = () => {
               <input
                 type="text"
                 value={videoUrl}
+                onChange={handleUrlChange}
+                placeholder="Paste your HLS stream URL here"
+                className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-input"
               />
             </div>
           </form>
