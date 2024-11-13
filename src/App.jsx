@@ -63,6 +63,12 @@ const App = () => {
                 </p>
               )}
             </div>
+            <button
+              type="submit"
+              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-2 px-4 rounded-md transition-colors"
+            >
+              Load Stream
+            </button>
           </form>
         </div>
       </div>
