@@ -24,54 +24,19 @@ const App = () => {
 
   useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add("dark");
+      document.body.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      document.body.classList.remove("dark");
     }
   }, [isDarkMode]);
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex items-center justify-center p-4">
-      <div className="w-full max-w-2xl bg-background rounded-lg shadow-xl overflow-hidden">
-        <div className="p-6">
-          <div className="flex items-center justify-between mb-6">
-            <h1 className="text-2xl font-bold text-foreground">HLS Player</h1>
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-              aria-label="Toggle dark mode"
-            >
-              <img
-                src={isDarkMode ? sunIcon : moonIcon}
-                alt="Toggle Dark Mode"
-                className="w-6 h-6"
-              />
-            </button>
-          </div>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-2">
-              <input
-                type="text"
-                value={videoUrl}
-                onChange={handleUrlChange}
-                placeholder="Paste your HLS stream URL here"
-                className="w-full px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-input"
-              />
-              {!isValidUrl && (
-                <p className="text-sm text-red-500">
-                  Please enter a valid HLS URL ending with .m3u8.
-                </p>
-              )}
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-2 px-4 rounded-md transition-colors"
-            >
-              Load Stream
-            </button>
-          </form>
-        </div>
-      </div>
+    <div
+      className={`max-w-6xl mx-auto p-5 ${
+        isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+      }`}
+    >
+      <h1 className="text-4xl font-bold text-center mb-4">HLS Player</h1>
     </div>
   );
 };
