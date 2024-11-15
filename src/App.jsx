@@ -1,3 +1,4 @@
+// src/App.js
 import React, { useState, useEffect } from "react";
 import HLSPlayer from "./HLSPlayer";
 import sunIcon from "./assets/sun.svg";
@@ -37,6 +38,11 @@ const App = () => {
       }`}
     >
       <h1 className="text-4xl font-bold text-center mb-4">HLS Player</h1>
+      <button
+        onClick={toggleDarkMode}
+        className="mb-4 flex items-center px-4 py-2 rounded-md bg-white text-white hover:bg-blue-600 transition"
+      >
+      </button>
     </div>
   );
 };
