@@ -42,6 +42,11 @@ const App = () => {
         onClick={toggleDarkMode}
         className="mb-4 flex items-center px-4 py-2 rounded-md bg-white text-white hover:bg-blue-600 transition"
       >
+        <img
+          src={isDarkMode ? sunIcon : moonIcon}
+          alt="Toggle Dark Mode"
+          className="w-6 h-6"
+        />
       </button>
     </div>
   );
