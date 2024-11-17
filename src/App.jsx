@@ -63,6 +63,12 @@ const App = () => {
           Load Stream
         </button>
       </form>
+      {!isValidUrl && (
+        <p className="text-red-500">
+          Please enter a valid HLS URL ending with .m3u8.
+        </p>
+      )}
+      {isValidUrl && videoUrl && <HLSPlayer videoUrl={videoUrl} />}
     </div>
   );
 };
