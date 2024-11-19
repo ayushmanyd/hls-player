@@ -47,7 +47,15 @@ const HLSPlayer = ({ videoUrl }) => {
   }, [videoUrl]);
 
   return (
-    
+    <div className="relative">
+      <video ref={videoRef} className="w-full" />
+      <div
+        className={`absolute bottom-2 left-0 right-0 flex items-center justify-between p-4 ${
+          isFullscreen ? "fullscreen-controls" : ""
+        }`}
+      >
+      </div>
+    </div>
   );
 };
 
