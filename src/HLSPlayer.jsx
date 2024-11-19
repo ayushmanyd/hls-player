@@ -18,13 +18,12 @@ const HLSPlayer = ({ videoUrl }) => {
   const [playbackRate, setPlaybackRate] = useState(1);
   const [isDragging, setIsDragging] = useState(false); // Flag to track if the user is dragging the seekbar
 
-
   useEffect(() => {
     const video = videoRef.current;
+    let hls = null;
 
     if (Hls.isSupported() && video) {
-      const hls = new Hls();
-
+      hls = new Hls();
       hls.loadSource(videoUrl);
       hls.attachMedia(video);
 
@@ -33,7 +32,7 @@ const HLSPlayer = ({ videoUrl }) => {
       });
 
       return () => {
-        hls.destroy();
+        if (hls) hls.destroy();
       };
     } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
       video.src = videoUrl;
@@ -41,12 +40,14 @@ const HLSPlayer = ({ videoUrl }) => {
         video.play();
       });
     }
+
+    return () => {
+      if (hls) hls.destroy();
+    };
   }, [videoUrl]);
 
   return (
-    <video ref={videoRef} controls className="w-full h-auto rounded-md mt-4">
-      Your browser does not support the video tag.
-    </video>
+    
   );
 };
 
