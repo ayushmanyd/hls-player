@@ -52,7 +52,15 @@ const HLSPlayer = ({ videoUrl }) => {
       video.play();
       setIsPlaying(true);
     } else {
+      video.pause();
+      setIsPlaying(false);
     }
+  };
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    video.muted = !video.muted;
+    setVolume(video.muted ? 0 : 1);
   };
 
   return (
