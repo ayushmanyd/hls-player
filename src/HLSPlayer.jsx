@@ -70,6 +70,16 @@ const HLSPlayer = ({ videoUrl }) => {
     setVolume(newVolume);
   };
 
+  const seekBackward = () => {
+    const video = videoRef.current;
+    video.currentTime -= 10;
+  };
+
+  const seekForward = () => {
+    const video = videoRef.current;
+    video.currentTime += 10;
+  };
+
   return (
     <div className="relative">
       <video ref={videoRef} className="w-full" />
