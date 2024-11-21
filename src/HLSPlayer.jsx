@@ -63,6 +63,13 @@ const HLSPlayer = ({ videoUrl }) => {
     setVolume(video.muted ? 0 : 1);
   };
 
+  const handleVolumeChange = (event) => {
+    const video = videoRef.current;
+    const newVolume = event.target.value;
+    video.volume = newVolume;
+    setVolume(newVolume);
+  };
+
   return (
     <div className="relative">
       <video ref={videoRef} className="w-full" />
