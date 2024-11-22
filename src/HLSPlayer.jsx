@@ -80,6 +80,15 @@ const HLSPlayer = ({ videoUrl }) => {
     video.currentTime += 10;
   };
 
+  const toggleFullscreen = () => {
+    const video = videoRef.current;
+    if (!document.fullscreenElement) {
+      video.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+    setIsFullscreen(!isFullscreen);
+  };
   return (
     <div className="relative">
       <video ref={videoRef} className="w-full" />
