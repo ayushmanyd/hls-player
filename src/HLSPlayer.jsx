@@ -89,6 +89,14 @@ const HLSPlayer = ({ videoUrl }) => {
     }
     setIsFullscreen(!isFullscreen);
   };
+
+  const handlePlaybackRateChange = (event) => {
+    const newRate = parseFloat(event.target.value);
+    setPlaybackRate(newRate);
+    const video = videoRef.current;
+    video.playbackRate = newRate;
+  };
+
   return (
     <div className="relative">
       <video ref={videoRef} className="w-full" />
