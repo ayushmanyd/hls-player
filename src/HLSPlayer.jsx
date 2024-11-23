@@ -97,6 +97,13 @@ const HLSPlayer = ({ videoUrl }) => {
     video.playbackRate = newRate;
   };
 
+  const handleSeekbarChange = (event) => {
+    const video = videoRef.current;
+    const newTime = event.target.value;
+    video.currentTime = newTime;
+  };
+
+
   return (
     <div className="relative">
       <video ref={videoRef} className="w-full" />
