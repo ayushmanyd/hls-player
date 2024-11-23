@@ -103,6 +103,15 @@ const HLSPlayer = ({ videoUrl }) => {
     video.currentTime = newTime;
   };
 
+  useEffect(() => {
+    const video = videoRef.current;
+    const updateTime = () => {
+      if (!isDragging) {
+        setCurrentTime(video.currentTime);
+      }
+      setDuration(video.duration);
+    };
+  }, [isDragging]);
 
   return (
     <div className="relative">
