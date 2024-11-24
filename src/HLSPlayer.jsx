@@ -119,6 +119,14 @@ const HLSPlayer = ({ videoUrl }) => {
     };
   }, [isDragging]);
 
+  const handleSeekbarMouseDown = () => {
+    setIsDragging(true);
+  };
+
+  const handleSeekbarMouseUp = () => {
+    setIsDragging(false);
+  };
+
   return (
     <div className="relative">
       <video ref={videoRef} className="w-full" />
