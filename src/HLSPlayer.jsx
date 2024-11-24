@@ -111,6 +111,12 @@ const HLSPlayer = ({ videoUrl }) => {
       }
       setDuration(video.duration);
     };
+
+    video.addEventListener("timeupdate", updateTime);
+
+    return () => {
+      video.removeEventListener("timeupdate", updateTime);
+    };
   }, [isDragging]);
 
   return (
