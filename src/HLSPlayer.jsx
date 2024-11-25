@@ -138,7 +138,11 @@ const HLSPlayer = ({ videoUrl }) => {
         {/* Left Controls */}
         <div className="flex space-x-2">
           <button onClick={seekBackward} className="p-2">
-            
+            <img
+              src={BackwardIcon}
+              alt="Backward"
+              className="w-6 h-6 filter brightness-0 invert"
+            />
           </button>
         </div>
       </div>
