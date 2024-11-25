@@ -135,6 +135,12 @@ const HLSPlayer = ({ videoUrl }) => {
           isFullscreen ? "fullscreen-controls" : ""
         }`}
       >
+        {/* Left Controls */}
+        <div className="flex space-x-2">
+          <button onClick={seekBackward} className="p-2">
+            
+          </button>
+        </div>
       </div>
     </div>
   );
