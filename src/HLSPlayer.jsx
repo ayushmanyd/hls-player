@@ -144,6 +144,13 @@ const HLSPlayer = ({ videoUrl }) => {
               className="w-6 h-6 filter brightness-0 invert"
             />
           </button>
+          <button onClick={togglePlay} className="p-2">
+            {isPlaying ? (
+              
+              
+            ) : (
+            )}
+          </button>
         </div>
       </div>
     </div>
