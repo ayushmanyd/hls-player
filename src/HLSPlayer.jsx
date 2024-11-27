@@ -159,6 +159,10 @@ const HLSPlayer = ({ videoUrl }) => {
               />
             )}
           </button>
+          <button onClick={seekForward} className="p-2">
+            <img
+            />
+          </button>
         </div>
       </div>
     </div>
