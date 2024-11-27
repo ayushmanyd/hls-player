@@ -152,6 +152,11 @@ const HLSPlayer = ({ videoUrl }) => {
                 className="w-6 h-6 filter brightness-0 invert"
               />
             ) : (
+              <img
+                src={PlayIcon}
+                alt="Play"
+                className="w-6 h-6 filter brightness-0 invert"
+              />
             )}
           </button>
         </div>
