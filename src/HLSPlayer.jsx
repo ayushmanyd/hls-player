@@ -167,6 +167,11 @@ const HLSPlayer = ({ videoUrl }) => {
             />
           </button>
         </div>
+
+        {/* Playback Speed Control */}
+        <div className="flex items-center space-x-2">
+          
+        </div>
       </div>
     </div>
   );
