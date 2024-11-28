@@ -161,6 +161,9 @@ const HLSPlayer = ({ videoUrl }) => {
           </button>
           <button onClick={seekForward} className="p-2">
             <img
+              src={ForwardIcon}
+              alt="Forward"
+              className="w-6 h-6 filter brightness-0 invert"
             />
           </button>
         </div>
