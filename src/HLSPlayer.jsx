@@ -173,7 +173,13 @@ const HLSPlayer = ({ videoUrl }) => {
           <label htmlFor="playback-speed" className="text-white">
             Speed:
           </label>
-          
+          <select
+            id="playback-speed"
+            value={playbackRate}
+            onChange={handlePlaybackRateChange}
+            className="bg-transparent text-white"
+          >
+          </select>
         </div>
       </div>
     </div>
