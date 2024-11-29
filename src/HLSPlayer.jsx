@@ -170,6 +170,9 @@ const HLSPlayer = ({ videoUrl }) => {
 
         {/* Playback Speed Control */}
         <div className="flex items-center space-x-2">
+          <label htmlFor="playback-speed" className="text-white">
+            Speed:
+          </label>
           
         </div>
       </div>
