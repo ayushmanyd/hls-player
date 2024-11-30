@@ -185,6 +185,11 @@ const HLSPlayer = ({ videoUrl }) => {
           </select>
         </div>
 
+        {/* Volume Control */}
+        <div className="flex items-center space-x-2">
+          <button onClick={toggleMute} className="p-2">
+          </button>
+        </div>
       </div>
     </div>
   );
