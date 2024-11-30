@@ -179,8 +179,12 @@ const HLSPlayer = ({ videoUrl }) => {
             onChange={handlePlaybackRateChange}
             className="bg-transparent text-white"
           >
+            <option value={1}>1x</option>
+            <option value={1.5}>1.5x</option>
+            <option value={2}>2x</option>
           </select>
         </div>
+
       </div>
     </div>
   );
