@@ -188,6 +188,11 @@ const HLSPlayer = ({ videoUrl }) => {
         {/* Volume Control */}
         <div className="flex items-center space-x-2">
           <button onClick={toggleMute} className="p-2">
+            <img
+              src={VolumeMuteIcon}
+              alt="Mute"
+              className="w-6 h-6 filter brightness-0 invert"
+            />
           </button>
         </div>
       </div>
