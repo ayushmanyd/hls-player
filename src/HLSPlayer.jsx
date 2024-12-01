@@ -194,6 +194,11 @@ const HLSPlayer = ({ videoUrl }) => {
               className="w-6 h-6 filter brightness-0 invert"
             />
           </button>
+          <input
+            type="range"
+            min="0"
+            max="1"
+          />
         </div>
       </div>
     </div>
