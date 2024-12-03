@@ -212,7 +212,11 @@ const HLSPlayer = ({ videoUrl }) => {
         {/* Fullscreen Control */}
         <div>
           <button onClick={toggleFullscreen} className="p-2">
-            
+            {isFullscreen ? (
+              <img
+              />
+            ) : (
+            )}
           </button>
         </div>
       </div>
