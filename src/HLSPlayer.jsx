@@ -214,6 +214,9 @@ const HLSPlayer = ({ videoUrl }) => {
           <button onClick={toggleFullscreen} className="p-2">
             {isFullscreen ? (
               <img
+                src={FullscreenCompressIcon}
+                alt="Exit Fullscreen"
+                className="w-6 h-6 filter brightness-0 invert"
               />
             ) : (
             )}
