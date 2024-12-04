@@ -219,6 +219,11 @@ const HLSPlayer = ({ videoUrl }) => {
                 className="w-6 h-6 filter brightness-0 invert"
               />
             ) : (
+              <img
+                src={FullscreenExpandIcon}
+                alt="Enter Fullscreen"
+                className="w-6 h-6 filter brightness-0 invert"
+              />
             )}
           </button>
         </div>
