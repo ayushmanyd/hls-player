@@ -228,6 +228,13 @@ const HLSPlayer = ({ videoUrl }) => {
           </button>
         </div>
       </div>
+
+      {/* Seekbar */}
+      <div className="absolute bottom-0 left-0 right-0 p-4">
+        <input
+          type="range"
+        />
+      </div>
     </div>
   );
 };
