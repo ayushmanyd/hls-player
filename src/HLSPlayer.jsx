@@ -237,6 +237,9 @@ const HLSPlayer = ({ videoUrl }) => {
           max={duration || 0}
           value={currentTime}
           onChange={handleSeekbarChange}
+          onMouseDown={handleSeekbarMouseDown}
+          onMouseUp={handleSeekbarMouseUp}
+          className="w-full"
         />
       </div>
     </div>
