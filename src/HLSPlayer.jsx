@@ -14,6 +14,25 @@ const formatTime = (seconds) => {
   const minutes = Math.floor((seconds % 3600) / 60);
   const remainingSeconds = Math.floor(seconds % 60);
 
+  return [hours, minutes, remainingSeconds]
+    .map((v) => v.toString().padStart(2, "0"))
+    .filter((v, i) => !(i === 0 && v === "00"))
+    .join(":");
+};
+
+const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
+  // Refs and State
+  const videoRef = useRef(null);
+  const [playerState, setPlayerState] = useState({
+    isPlaying: false,
+    volume: 1,
+    currentTime: 0,
+    duration: 0,
+    isFullscreen: false,
+    playbackRate: 1,
+    isMuted: false,
+  });
+
 
   // Render
   return (
