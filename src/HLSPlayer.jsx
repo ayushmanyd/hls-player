@@ -33,6 +33,18 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     isMuted: false,
   });
 
+  // HLS Setup
+  const setupHLS = useCallback(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    let hls = null;
+    try {
+      
+    }
+
+    return hls;
+  }, [videoUrl, autoPlay]);
 
   // Render
   return (
