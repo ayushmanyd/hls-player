@@ -40,7 +40,15 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
 
     let hls = null;
     try {
-      
+      if (Hls.isSupported()) {
+        hls = new Hls({
+          // Additional HLS configuration options
+          maxBufferLength: 30,
+          maxMaxBufferLength: 60,
+        });
+      }
+    } catch (error) {
+      console.error("Video setup error:", error);
     }
 
     return hls;
