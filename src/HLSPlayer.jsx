@@ -46,6 +46,14 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
           maxBufferLength: 30,
           maxMaxBufferLength: 60,
         });
+
+        hls.loadSource(videoUrl);
+        hls.attachMedia(video);
+      } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+        video.src = videoUrl;
+        video.addEventListener("loadedmetadata", () => {
+          if (autoPlay) video.play();
+        });
       }
     } catch (error) {
       console.error("Video setup error:", error);
