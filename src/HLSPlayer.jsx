@@ -49,6 +49,17 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
 
         hls.loadSource(videoUrl);
         hls.attachMedia(video);
+
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          if (autoPlay) video.play();
+        });
+
+        hls.on(Hls.Events.ERROR, (event, data) => {
+          console.error("HLS Error:", data);
+          // Handle different types of errors
+        });
+
+        return hls;
       } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
         video.src = videoUrl;
         video.addEventListener("loadedmetadata", () => {
