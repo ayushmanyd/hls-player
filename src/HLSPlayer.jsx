@@ -73,6 +73,15 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     return hls;
   }, [videoUrl, autoPlay]);
 
+  // Effect for HLS setup and cleanup
+  useEffect(() => {
+    const hls = setupHLS();
+
+    return () => {
+      if (hls) hls.destroy();
+    };
+  }, [setupHLS]);
+
   // Render
   return (
     <div className="relative w-full">
