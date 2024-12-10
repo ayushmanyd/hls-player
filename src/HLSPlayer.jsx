@@ -82,6 +82,18 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     };
   }, [setupHLS]);
 
+  // Event Handlers
+  const togglePlay = () => {
+    const video = videoRef.current;
+    if (video.paused) {
+      video.play();
+      setPlayerState((prev) => ({ ...prev, isPlaying: true }));
+    } else {
+      video.pause();
+      setPlayerState((prev) => ({ ...prev, isPlaying: false }));
+    }
+  };
+
   // Render
   return (
     <div className="relative w-full">
