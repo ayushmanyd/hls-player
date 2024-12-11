@@ -97,7 +97,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
   const toggleMute = () => {
     const video = videoRef.current;
     video.muted = !video.muted;
-    
+    setPlayerState((prev) => ({
+      ...prev,
+      isMuted: video.muted,
+      volume: video.muted ? 0 : prev.volume,
+    }));
   };
 
   // Render
