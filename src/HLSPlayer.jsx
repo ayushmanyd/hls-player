@@ -94,6 +94,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     }
   };
 
+  const toggleMute = () => {
+    const video = videoRef.current;
+    video.muted = !video.muted;
+    
+  };
+
   // Render
   return (
     <div className="relative w-full">
