@@ -104,6 +104,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     }));
   };
 
+  const handleVolumeChange = (event) => {
+    const video = videoRef.current;
+    const newVolume = parseFloat(event.target.value);
+
+    video.volume = newVolume;
+  };
+
   // Render
   return (
     <div className="relative w-full">
