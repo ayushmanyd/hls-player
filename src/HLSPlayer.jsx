@@ -123,7 +123,16 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     video.currentTime = Math.max(0, Math.min(seconds, video.duration));
   };
 
-
+  const toggleFullscreen = () => {
+    const video = videoRef.current;
+    if (!document.fullscreenElement) {
+      video.requestFullscreen().catch((err) => {
+        console.error("Fullscreen error:", err);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  };
 
   // Render
   return (
