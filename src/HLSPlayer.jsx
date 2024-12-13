@@ -118,6 +118,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     }));
   };
 
+  const seekTo = (seconds) => {
+    const video = videoRef.current;
+    video.currentTime = Math.max(0, Math.min(seconds, video.duration));
+  };
+
+
+
   // Render
   return (
     <div className="relative w-full">
