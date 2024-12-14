@@ -134,6 +134,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     }
   };
 
+  // Video Event Listeners
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    };
+
   // Render
   return (
     <div className="relative w-full">
