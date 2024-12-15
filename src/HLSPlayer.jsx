@@ -148,6 +148,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
       }));
     };
 
+    const handleFullscreenChange = () => {
+      setPlayerState((prev) => ({
+        ...prev,
+        isFullscreen: !!document.fullscreenElement,
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
+
   // Render
   return (
     <div className="relative w-full">
