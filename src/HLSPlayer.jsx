@@ -152,6 +152,10 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
       setPlayerState((prev) => ({
         ...prev,
         isFullscreen: !!document.fullscreenElement,
+      }));
+    };
+
+    video.addEventListener("timeupdate", updatePlayerState);
     document.addEventListener("fullscreenchange", handleFullscreenChange);
   }, []);
 
