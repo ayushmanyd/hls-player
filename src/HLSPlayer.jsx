@@ -167,7 +167,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
   // Render
   return (
     <div className="relative w-full">
-      
+      <video
+        ref={videoRef}
+        className="w-full"
+        onError={(e) => console.error("Video error:", e)}
+      />
     </div>
   );
 };
