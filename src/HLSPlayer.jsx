@@ -178,7 +178,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
         {/* Seekbar */}
         <input
           type="range"
-          
+          min="0"
+          max={playerState.duration || 0}
+          value={playerState.currentTime}
+          onChange={(e) => seekTo(parseFloat(e.target.value))}
+          className="w-full mb-2"
         />
       </div>
     </div>
