@@ -172,6 +172,15 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
         className="w-full"
         onError={(e) => console.error("Video error:", e)}
       />
+
+      {/* Player Controls */}
+      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4">
+        {/* Seekbar */}
+        <input
+          type="range"
+          
+        />
+      </div>
     </div>
   );
 };
