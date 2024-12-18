@@ -184,6 +184,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
           onChange={(e) => seekTo(parseFloat(e.target.value))}
           className="w-full mb-2"
         />
+
+        {/* Time Display */}
+        <div className="text-white text-sm mb-2">
+          {formatTime(playerState.currentTime)} /{" "}
+          {formatTime(playerState.duration)}
+        </div>
       </div>
     </div>
   );
