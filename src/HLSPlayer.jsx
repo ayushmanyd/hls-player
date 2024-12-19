@@ -190,6 +190,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
           {formatTime(playerState.currentTime)} /{" "}
           {formatTime(playerState.duration)}
         </div>
+
+        {/* Control Buttons */}
+        <div className="flex justify-between items-center">
+          {/* Playback Controls */}
+          <div className="flex space-x-2">
+          </div>
+        </div>
       </div>
     </div>
   );
