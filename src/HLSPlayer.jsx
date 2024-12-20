@@ -195,6 +195,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
         <div className="flex justify-between items-center">
           {/* Playback Controls */}
           <div className="flex space-x-2">
+            <button onClick={() => seekTo(playerState.currentTime - 10)}>
+              <img
+                src={BackwardIcon}
+                alt="Backward"
+                className="w-6 h-6 invert"
+              />
+            </button>
           </div>
         </div>
       </div>
