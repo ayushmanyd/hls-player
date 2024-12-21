@@ -202,6 +202,10 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
                 className="w-6 h-6 invert"
               />
             </button>
+            <button onClick={togglePlay}>
+              
+              
+            </button>
           </div>
         </div>
       </div>
