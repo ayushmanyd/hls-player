@@ -203,8 +203,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
               />
             </button>
             <button onClick={togglePlay}>
-              
-              
+              <img
+                src={playerState.isPlaying ? PauseIcon : PlayIcon}
+                alt={playerState.isPlaying ? "Pause" : "Play"}
+                className="w-6 h-6 invert"
+              />
             </button>
           </div>
         </div>
