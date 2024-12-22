@@ -209,6 +209,9 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
                 className="w-6 h-6 invert"
               />
             </button>
+            <button onClick={() => seekTo(playerState.currentTime + 10)}>
+              <img src={ForwardIcon} alt="Forward" className="w-6 h-6 invert" />
+            </button>
           </div>
         </div>
       </div>
