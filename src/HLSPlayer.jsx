@@ -213,6 +213,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
               <img src={ForwardIcon} alt="Forward" className="w-6 h-6 invert" />
             </button>
           </div>
+
+          {/* Volume Control */}
+          <div className="flex items-center space-x-2">
+            <button onClick={toggleMute}>
+              <img src={VolumeMuteIcon} alt="Mute" className="w-6 h-6 invert" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
