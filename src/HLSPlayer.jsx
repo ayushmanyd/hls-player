@@ -219,6 +219,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
             <button onClick={toggleMute}>
               <img src={VolumeMuteIcon} alt="Mute" className="w-6 h-6 invert" />
             </button>
+            <input
+              type="range"
+              min="0"
+              max="1"
+            />
           </div>
         </div>
       </div>
