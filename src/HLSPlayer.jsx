@@ -223,6 +223,10 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
               type="range"
               min="0"
               max="1"
+              step="0.01"
+              value={playerState.volume}
+              onChange={handleVolumeChange}
+              className="w-24"
             />
           </div>
         </div>
