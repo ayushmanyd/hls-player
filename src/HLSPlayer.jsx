@@ -229,6 +229,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
               className="w-24"
             />
           </div>
+
+          {/* Fullscreen Control */}
+          <button onClick={toggleFullscreen}>
+            Click
+          </button>
         </div>
       </div>
     </div>
