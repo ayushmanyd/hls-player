@@ -238,6 +238,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
                   ? FullscreenCompressIcon
                   : FullscreenExpandIcon
               }
+              alt={
+                playerState.isFullscreen
+                  ? "Exit Fullscreen"
+                  : "Enter Fullscreen"
+              }
+              className="w-6 h-6 invert"
             />
           </button>
         </div>
