@@ -61,6 +61,17 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     return hls;
   }, [videoUrl, autoPlay]);
 
+  useEffect(() => {
+    const hls = setupHLS();
+    return () => hls && hls.destroy();
+  }, [setupHLS]);
+
+  const togglePlay = () => {
+    const video = videoRef.current;
+    video.paused ? video.play() : video.pause();
+    setPlayerState((prev) => ({ ...prev, isPlaying: !video.paused }));
+  };
+
   return (
     <div className="relative w-full bg-black rounded-lg overflow-hidden">
       <video
