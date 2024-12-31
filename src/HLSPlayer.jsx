@@ -72,6 +72,16 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     setPlayerState((prev) => ({ ...prev, isPlaying: !video.paused }));
   };
 
+  const toggleMute = () => {
+    const video = videoRef.current;
+    video.muted = !video.muted;
+    setPlayerState((prev) => ({
+      ...prev,
+      isMuted: video.muted,
+      volume: video.muted ? 0 : prev.volume,
+    }));
+  };
+
   return (
     <div className="relative w-full bg-black rounded-lg overflow-hidden">
       <video
