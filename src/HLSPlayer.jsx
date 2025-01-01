@@ -82,6 +82,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     }));
   };
 
+  const handleVolumeChange = (e) => {
+    const video = videoRef.current;
+    const newVolume = parseFloat(e.target.value);
+    video.volume = newVolume;
+    video.muted = newVolume === 0;
+  };
+
   return (
     <div className="relative w-full bg-black rounded-lg overflow-hidden">
       <video
