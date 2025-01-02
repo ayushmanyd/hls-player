@@ -87,6 +87,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     const newVolume = parseFloat(e.target.value);
     video.volume = newVolume;
     video.muted = newVolume === 0;
+    setPlayerState((prev) => ({
+      ...prev,
+      volume: newVolume,
+      isMuted: newVolume === 0,
+    }));
   };
 
   return (
