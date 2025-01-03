@@ -94,6 +94,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     }));
   };
 
+  const seekTo = (seconds) => {
+    const video = videoRef.current;
+    video.currentTime = Math.max(0, Math.min(seconds, video.duration));
+  };
+
   return (
     <div className="relative w-full bg-black rounded-lg overflow-hidden">
       <video
