@@ -99,6 +99,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     video.currentTime = Math.max(0, Math.min(seconds, video.duration));
   };
 
+  const toggleFullscreen = () => {
+    const video = videoRef.current;
+    
+  };
+  
   return (
     <div className="relative w-full bg-black rounded-lg overflow-hidden">
       <video
