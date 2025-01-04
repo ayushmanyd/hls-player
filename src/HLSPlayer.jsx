@@ -101,7 +101,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
 
   const toggleFullscreen = () => {
     const video = videoRef.current;
-    
+    if (!document.fullscreenElement) {
+      video
+        .requestFullscreen()
+        .catch((err) => console.error("Fullscreen error:", err));
+    } else {
+      document.exitFullscreen();
+    }
   };
   
   return (
