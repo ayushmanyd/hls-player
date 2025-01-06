@@ -109,7 +109,14 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
       document.exitFullscreen();
     }
   };
-  
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const updatePlayerState = () => {
+    };
+
   return (
     <div className="relative w-full bg-black rounded-lg overflow-hidden">
       <video
