@@ -115,6 +115,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     if (!video) return;
 
     const updatePlayerState = () => {
+      setPlayerState((prev) => ({
+        ...prev,
+        currentTime: video.currentTime,
+        duration: video.duration,
+        isPlaying: !video.paused,
+      }));
     };
 
   return (
