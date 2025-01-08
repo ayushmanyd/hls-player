@@ -123,6 +123,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
       }));
     };
 
+    const handleFullscreenChange = () => {
+      setPlayerState((prev) => ({
+        ...prev,
+        isFullscreen: !!document.fullscreenElement,
+      }));
+    };
+
   return (
     <div className="relative w-full bg-black rounded-lg overflow-hidden">
       <video
