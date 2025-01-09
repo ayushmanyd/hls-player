@@ -130,6 +130,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
       }));
     };
 
+    video.addEventListener("timeupdate", updatePlayerState);
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+  }, []);
+
   return (
     <div className="relative w-full bg-black rounded-lg overflow-hidden">
       <video
