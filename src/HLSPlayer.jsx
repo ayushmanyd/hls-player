@@ -133,6 +133,10 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     video.addEventListener("timeupdate", updatePlayerState);
     document.addEventListener("fullscreenchange", handleFullscreenChange);
 
+    return () => {
+      video.removeEventListener("timeupdate", updatePlayerState);
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
   }, []);
 
   return (
