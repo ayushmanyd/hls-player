@@ -146,6 +146,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
         className="w-full h-auto"
         onError={(e) => console.error("Video error:", e)}
       />
+
+      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+        <input
+          type="range"
+        />
     </div>
   );
 };
