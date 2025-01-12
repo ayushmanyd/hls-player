@@ -150,6 +150,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
         <input
           type="range"
+          min="0"
+          max={playerState.duration || 0}
+          value={playerState.currentTime}
+          onChange={(e) => seekTo(parseFloat(e.target.value))}
+          className="w-full cursor-pointer mb-3"
         />
     </div>
   );
