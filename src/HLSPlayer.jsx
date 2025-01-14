@@ -159,7 +159,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
 
         <div className="flex items-center justify-between text-white">
           <div className="flex items-center space-x-4">
-            
+            <button
+              onClick={() => seekTo(playerState.currentTime - 10)}
+              aria-label="Rewind 10 seconds"
+            >
+              <img src={BackwardIcon} alt="Rewind" className="w-6 h-6" />
+            </button>
           </div>
         </div>
       </div>
