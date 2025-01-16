@@ -165,6 +165,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
             >
               <img src={BackwardIcon} alt="Rewind" className="w-6 h-6" />
             </button>
+            <button
+              onClick={togglePlay}
+              aria-label={playerState.isPlaying ? "Pause" : "Play"}
+            >
+            </button>
           </div>
         </div>
       </div>
