@@ -169,6 +169,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
               onClick={togglePlay}
               aria-label={playerState.isPlaying ? "Pause" : "Play"}
             >
+              <img
+                src={playerState.isPlaying ? PauseIcon : PlayIcon}
+                alt="Play/Pause"
+                className="w-6 h-6"
+              />
             </button>
           </div>
         </div>
