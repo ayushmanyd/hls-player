@@ -175,6 +175,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
                 className="w-6 h-6"
               />
             </button>
+            <button
+              onClick={() => seekTo(playerState.currentTime + 10)}
+              aria-label="Forward 10 seconds"
+            >
+            </button>
           </div>
         </div>
       </div>
