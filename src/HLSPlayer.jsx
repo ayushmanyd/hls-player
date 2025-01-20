@@ -183,7 +183,10 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
             </button>
           </div>
 
-          
+          <div className="flex items-center space-x-4">
+            <button onClick={toggleMute} aria-label="Mute">
+              
+            </button>
           </div>
         </div>
       </div>
