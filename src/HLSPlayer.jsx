@@ -185,7 +185,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
 
           <div className="flex items-center space-x-4">
             <button onClick={toggleMute} aria-label="Mute">
-              
+              <img
+                src={playerState.isMuted ? VolumeMuteIcon : VolumeIcon}
+                alt="Mute/Unmute"
+                className="w-6 h-6"
+              />
             </button>
           </div>
         </div>
