@@ -201,8 +201,10 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
               className="w-24 cursor-pointer"
             />
             <button onClick={toggleFullscreen} aria-label="Fullscreen">
-              <img>
-              </img>
+              <img
+                src={
+                }
+              />
             </button>
           </div>
         </div>
