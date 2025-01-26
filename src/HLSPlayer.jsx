@@ -203,6 +203,9 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
             <button onClick={toggleFullscreen} aria-label="Fullscreen">
               <img
                 src={
+                  playerState.isFullscreen
+                    ? FullscreenCompressIcon
+                    : FullscreenExpandIcon
                 }
               />
             </button>
