@@ -207,6 +207,8 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
                     ? FullscreenCompressIcon
                     : FullscreenExpandIcon
                 }
+                alt="Fullscreen"
+                className="w-6 h-6"
               />
             </button>
           </div>
