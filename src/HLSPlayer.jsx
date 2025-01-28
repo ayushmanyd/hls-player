@@ -140,81 +140,9 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
   }, []);
 
   return (
-    <div className="relative w-full bg-black rounded-lg overflow-hidden">
-      <video
-        ref={videoRef}
-        className="w-full h-auto"
-        onError={(e) => console.error("Video error:", e)}
-      />
-
-      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-        <input
-          type="range"
-          min="0"
-          max={playerState.duration || 0}
-          value={playerState.currentTime}
-          onChange={(e) => seekTo(parseFloat(e.target.value))}
-          className="w-full cursor-pointer mb-3"
-        />
-
-        <div className="flex items-center justify-between text-white">
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={() => seekTo(playerState.currentTime - 10)}
-              aria-label="Rewind 10 seconds"
-            >
-              <img src={BackwardIcon} alt="Rewind" className="w-6 h-6" />
-            </button>
-            <button
-              onClick={togglePlay}
-              aria-label={playerState.isPlaying ? "Pause" : "Play"}
-            >
-              <img
-                src={playerState.isPlaying ? PauseIcon : PlayIcon}
-                alt="Play/Pause"
-                className="w-6 h-6"
-              />
-            </button>
-            <button
-              onClick={() => seekTo(playerState.currentTime + 10)}
-              aria-label="Forward 10 seconds"
-            >
-              <img src={ForwardIcon} alt="Forward" className="w-6 h-6" />
-            </button>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <button onClick={toggleMute} aria-label="Mute">
-              <img
-                src={playerState.isMuted ? VolumeMuteIcon : VolumeIcon}
-                alt="Mute/Unmute"
-                className="w-6 h-6"
-              />
-            </button>
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={playerState.volume}
-              onChange={handleVolumeChange}
-              className="w-24 cursor-pointer"
-            />
-            <button onClick={toggleFullscreen} aria-label="Fullscreen">
-              <img
-                src={
-                  playerState.isFullscreen
-                    ? FullscreenCompressIcon
-                    : FullscreenExpandIcon
-                }
-                alt="Fullscreen"
-                className="w-6 h-6"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div className="relative w-full bg-black rounded-lg overflow-hidden shadow-lg">
+  <video />
+</div>
   );
 };
 
