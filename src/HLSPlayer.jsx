@@ -141,7 +141,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
 
   return (
     <div className="relative w-full bg-black rounded-lg overflow-hidden shadow-lg">
-  <video />
+  <video
+    ref={videoRef}
+    className="w-full h-auto"
+    onError={(e) => console.error("Video error:", e)}
+  />
+
 </div>
   );
 };
