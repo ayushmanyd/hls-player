@@ -151,8 +151,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     {/* Progress bar */}
     <input
       type="range"
+      min="0"
+      max={playerState.duration || 0}
+      value={playerState.currentTime}
+      onChange={(e) => seekTo(parseFloat(e.target.value))}
+      className="w-full h-1 bg-gray-500 accent-primaryColor rounded-full cursor-pointer mb-3 transition-all"
     />
-
   </div>
 </div>
   );
