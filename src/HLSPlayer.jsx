@@ -157,6 +157,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
       onChange={(e) => seekTo(parseFloat(e.target.value))}
       className="w-full h-1 bg-gray-500 accent-primaryColor rounded-full cursor-pointer mb-3 transition-all"
     />
+
+    <div className="flex items-center justify-between text-white">
+      {/* Left controls */}
+      <div className="flex items-center space-x-6">
+        <button></button>
+        >
+    </div>
   </div>
 </div>
   );
