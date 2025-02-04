@@ -161,8 +161,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
     <div className="flex items-center justify-between text-white">
       {/* Left controls */}
       <div className="flex items-center space-x-6">
-        <button></button>
+        <button
+          onClick={() => seekTo(playerState.currentTime - 10)}
+          aria-label="Rewind 10 seconds"
+          className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition"
         >
+        </button>
     </div>
   </div>
 </div>
