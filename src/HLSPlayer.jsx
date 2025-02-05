@@ -166,7 +166,13 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
           aria-label="Rewind 10 seconds"
           className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition"
         >
+          <img src={BackwardIcon} alt="Rewind" className="w-6 h-6" />
         </button>
+        <button
+          
+        >
+        </button>
+      </div>
     </div>
   </div>
 </div>
