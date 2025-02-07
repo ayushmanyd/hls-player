@@ -173,6 +173,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
           aria-label={playerState.isPlaying ? "Pause" : "Play"}
           className="p-2 rounded-full bg-primaryColor hover:bg-primaryColor/90 transition"
         >
+          <img
+            src={playerState.isPlaying ? PauseIcon : PlayIcon}
+            alt="Play/Pause"
+            className="w-6 h-6"
+          />
         </button>
       </div>
     </div>
