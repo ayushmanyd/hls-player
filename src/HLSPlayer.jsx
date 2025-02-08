@@ -179,6 +179,10 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
             className="w-6 h-6"
           />
         </button>
+        <button
+        >
+          <img src={ForwardIcon} alt="Forward" className="w-6 h-6" />
+        </button>
       </div>
     </div>
   </div>
