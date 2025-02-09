@@ -180,6 +180,9 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
           />
         </button>
         <button
+          onClick={() => seekTo(playerState.currentTime + 10)}
+          aria-label="Forward 10 seconds"
+          className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition"
         >
           <img src={ForwardIcon} alt="Forward" className="w-6 h-6" />
         </button>
