@@ -191,8 +191,10 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
       {/* Right controls */}
       <div className="flex items-center space-x-4">
         <button
+          onClick={toggleMute}
+          aria-label="Mute"
+          className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition"
         >
-        </button>
       </div>
     </div>
   </div>
