@@ -195,6 +195,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
           aria-label="Mute"
           className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition"
         >
+          <img
+            src={playerState.isMuted ? VolumeMuteIcon : VolumeIcon}
+            alt="Mute/Unmute"
+            className="w-6 h-6"
+          />
+        </button>
       </div>
     </div>
   </div>
