@@ -201,6 +201,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
             className="w-6 h-6"
           />
         </button>
+        <input
+          type="range"
+          min="0"
+          max="1"
+        />
       </div>
     </div>
   </div>
