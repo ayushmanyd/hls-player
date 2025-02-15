@@ -210,6 +210,10 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
           onChange={handleVolumeChange}
           className="w-24 h-1 bg-gray-500 accent-primaryColor rounded-full cursor-pointer"
         />
+        <button
+          onClick={toggleFullscreen}
+        >
+        </button>
       </div>
     </div>
   </div>
