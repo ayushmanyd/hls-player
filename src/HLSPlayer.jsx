@@ -212,6 +212,8 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
         />
         <button
           onClick={toggleFullscreen}
+          aria-label="Fullscreen"
+          className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition"
         >
         </button>
       </div>
