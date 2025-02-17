@@ -215,6 +215,11 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
           aria-label="Fullscreen"
           className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition"
         >
+          <img
+            src={
+              playerState
+            }
+          />
         </button>
       </div>
     </div>
