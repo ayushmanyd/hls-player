@@ -217,7 +217,12 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
         >
           <img
             src={
-              playerState
+               playerState.isFullscreen
+                ? FullscreenCompressIcon
+                : FullscreenExpandIcon
+            }
+            alt="Fullscreen"
+            className="w-6 h-6"
             }
           />
         </button>
