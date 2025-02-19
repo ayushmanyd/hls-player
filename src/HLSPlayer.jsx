@@ -217,18 +217,9 @@ const HLSPlayer = ({ videoUrl, autoPlay = true }) => {
         >
           <img
             src={
-<<<<<<< Updated upstream
                playerState.isFullscreen
                 ? FullscreenCompressIcon
                 : FullscreenExpandIcon
-            }
-            alt="Fullscreen"
-            className="w-6 h-6"
-=======
-              playerState.isFullscreen
-                ? FullscreenCompressIcon
-                : FullscreenExpandIcon
->>>>>>> Stashed changes
             }
             alt="Fullscreen"
             className="w-6 h-6"
